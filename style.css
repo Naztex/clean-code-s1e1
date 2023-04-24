@@ -41,7 +41,7 @@ button{
   margin: 0 auto 0;
 }
 .section {
-	width: 100%;
+  width: 100%;
 }
 .section__wrapper {
   display: flex;
@@ -68,17 +68,17 @@ button{
   text-transform: uppercase;
 }
 .title__label {
-	display: block;
+  display: block;
 }
 .task {
   display: inline-block;
-	font-family: "Lato", sans-serif;
-	font-size: 18px;
-	line-height: 18px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
   flex-grow: 1;
 }
 .task_input {
-	display: none;
+  display: none;
   margin: 0;
   height: 21px;
   padding: 0 9px;
@@ -91,7 +91,7 @@ button{
 }
 /* New Task */
 .task_new {
-	display: block;
+  display: block;
 }
 /* Task list */
 .list__item {
