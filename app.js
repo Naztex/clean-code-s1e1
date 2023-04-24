@@ -37,7 +37,7 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-		checkBox.className='list__checkbox';
+    checkBox.className='list__checkbox';
     editInput.type="text";
     editInput.className="task task_input";
 
@@ -46,8 +46,8 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="button button_delete";
     deleteButtonImg.src='./remove.svg';
-		deleteButtonImg.alt='delete';
-		deleteButtonImg.className='button__img';
+    deleteButtonImg.alt='delete';
+    deleteButtonImg.className='button__img';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -103,8 +103,8 @@ var editTask=function(){
 
     //toggle .edit-mode on the parent.
     listItem.classList.toggle("edit-mode");
-		label.classList.toggle('edit-mode__label');
-		editInput.classList.toggle('edit-mode__input');
+    label.classList.toggle('edit-mode__label');
+    editInput.classList.toggle('edit-mode__input');
 };
 
 
@@ -116,7 +116,6 @@ var deleteTask=function(){
     var ul=listItem.parentNode;
     //Remove the parent list item from the ul.
     ul.removeChild(listItem);
-
 }
 
 
@@ -128,7 +127,6 @@ var taskCompleted=function(){
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
-
 }
 
 
@@ -164,11 +162,11 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     var editButton=taskListItem.querySelector(".button_edit");
     var deleteButton=taskListItem.querySelector(".button_delete");
     var completeLabel=taskListItem.querySelector('.task_label');
-		if(checkBox.checked) {
-			completeLabel.classList.add('completed');
-		} else {
-			completeLabel.classList.remove('completed');
-		}
+    if(checkBox.checked) {
+      completeLabel.classList.add('completed');
+    } else {
+      completeLabel.classList.remove('completed');
+    }
     //Bind editTask to edit button.
     editButton.onclick=editTask;
     //Bind deleteTask to delete button.
@@ -187,8 +185,8 @@ for (var i=0; i<incompleteTaskHolder.children.length;i++){
 
 //cycle over completedTasksHolder ul list items
 for (var i=0; i<completedTasksHolder.children.length;i++){
-	//bind events to list items chldren(tasksIncompleted)
-	bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+  //bind events to list items chldren(tasksIncompleted)
+  bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
 
 
